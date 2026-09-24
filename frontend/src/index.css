@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-paper text-ink font-sans text-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+  :focus-visible {
+    outline: 2px solid #1C2B39;
+    outline-offset: 2px;
+  }
+  code {
+    @apply rounded-sm bg-paper-sunk px-1 text-[0.85em];
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-delay: 0ms !important;
+    }
+  }
+}
+
+@layer components {
+  .field-label {
+    @apply block text-meta font-medium text-ink-soft mb-1.5;
+  }
+  .field-input {
+    @apply w-full rounded-form border border-rule-strong bg-paper-sheet px-3 py-2 text-body text-ink
+      placeholder:text-ink-faint focus:border-ink focus:outline-none focus:ring-2 focus:ring-ink/15
+      disabled:bg-paper-sunk disabled:text-ink-muted;
+  }
+  .field-input[aria-invalid='true'] {
+    @apply border-state-breached;
+  }
+  .field-error {
+    @apply mt-1 text-meta text-state-breached;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-form bg-ink px-4 py-2.5 text-body font-medium text-paper
+      transition-colors hover:bg-ink-soft disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-form border border-ink px-4 py-2.5 text-body font-medium text-ink
+      transition-colors hover:bg-paper-sunk disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-quiet {
+    @apply inline-flex items-center text-meta font-medium text-ink underline decoration-rule-strong underline-offset-4
+      hover:decoration-ink;
+  }
+}
