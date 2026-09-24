@@ -1,6 +1,14 @@
 # Student Support & Ticket Management System
 
-A prototype support desk for the Student Services Office of **CMR IT** (a fictional college; change the name in `frontend/src/config.ts`). Students raise tickets about fees, attendance, ID cards, documents and certificates. Staff see them in a register, update status, reassign, and watch SLA deadlines.
+[Add demo video here]
+
+This app lets students raise service tickets and lets staff track, assign, and update them in one dashboard.
+
+## How it works
+- Students submit a ticket with category, subject, and description.
+- The app auto-assigns it to the correct department staff member.
+- Staff can view the ticket register, update status, reassign work, and monitor SLA deadlines.
+- The dashboard shows active tickets, escalations, and overdue items.
 
 ## Quick start
 
