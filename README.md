@@ -1,6 +1,9 @@
 # Student Support & Ticket Management System
 
-[Add demo video here]
+
+https://github.com/user-attachments/assets/d4de4b9e-4a38-4086-ada8-b87efc2a4c13
+
+
 
 This app lets students raise service tickets and lets staff track, assign, and update them in one dashboard.
 
